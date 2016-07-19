@@ -1,6 +1,14 @@
 # adapt-theme-delta
 
 ----------------------------
+## Customised elements
+
++ Background assets added
++ More fonts added
++ Custom PLP.hbs
+
+
+----------------------------
 **Version number:**  2.0.2   
 **Framework versions:**  2.0     
 **Author / maintainer:** Adapt Core Team  and DeltaNet
