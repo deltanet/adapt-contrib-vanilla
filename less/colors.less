@@ -1,118 +1,152 @@
+// --------------------------
+// Course specifics to edit    
+// --------------------------
+//Page background color
+@main-background-color: #343434;
+// Navigation bar
+@navigation-bg-color: #000;
+@navigation-text-color: #fff;
+// Titles
+@title-text-color: #fff;
+@title-background-color: #546e7a;
+// Text
+@text-color: #000;
+@text-background-color: rgba(255,255,255,1.0);
+@text-background-color-fallback: #fff;
+// Button BG's
+@interactive-normal-color: #F26100;
+@interactive-hover-color: #37474f;
+@interactive-selected-color: #37474f;
+@interactive-visited-color: #727272;
+@interactive-disabled-color: #727272;
+// Button text colours
+@interactive-text-normal-color: #fff;
+@interactive-text-hover-color: #fff;
+@interactive-text-selected-color: #fff;
+@interactive-text-visited-color: #ccc;
+@interactive-text-disabled-color: #ccc;
+// Instruction text
+@instruction-color: @interactive-normal-color;
+// Notify
+// White on black
+@overlay-background-color: rgba(0,0,0,0.8);
+@overlay-background-color-fallback: url('assets/transparency-dark.png');
+// Black on white
+//@overlay-background-color: rgba(255,255,255,0.8);
+//@overlay-background-color-fallback: url('assets/transparency-light.png');
+// --------------------------
+// End of course specifics to edit    
+// --------------------------
+
 // Custom Colors
 // =============
 
 @white: #ffffff;
-@black: #4b4e4f;
-@blue: #078292;
-@light-grey: #78909c;
-@mid-grey: #546e7a;
-@dark-grey: #37474f;
-@red: #f26c4f;
-@green: #82ca9c;
-
+@red: #d30606;
+@green: #109f10;
 
 // Main Colors
 // ===========
 
 // Components
-@primary-color: @blue;
-@primary-color-inverted: @white;
+@primary-color: @title-background-color;
+@primary-color-inverted: @title-text-color;
 // Buttons
-@secondary-color: @black;
-@secondary-color-inverted: @white;
+@secondary-color: @interactive-normal-color;
+@secondary-color-inverted: @interactive-hover-color;
 // Navigation Bar
-@tertiary-color: @white;
-@tertiary-color-inverted: @black;
+@tertiary-color: @navigation-bg-color;
+@tertiary-color-inverted: @navigation-text-color;
 // Drawer
-@quaternary-color: @dark-grey;
-@quaternary-color-inverted: @white;
+@quaternary-color: @primary-color;
+@quaternary-color-inverted: @primary-color-inverted;
 // Body
-@foreground-color: @black;
-@background-color: @white;
-@foreground-color-inverted: @white;
-@background-color-inverted: @mid-grey;
+@foreground-color: @text-color;
+@background-color: @text-background-color-fallback;
+@foreground-color-inverted: @title-text-color;
+@background-color-inverted: @title-background-color;
 // Validation States
 @validation-error: @red;
 @validation-success: @green;
 // Disabled States
-@disabled-color: #727272;
-@disabled-color-inverted: #ccc;
+@disabled-color: @interactive-disabled-color;
+@disabled-color-inverted: @interactive-text-disabled-color;
 
-@transparency: rgba(255,255,255,0.8);
-@transparency-fallback-png: url('assets/transparency-light.png');
+@transparency: @overlay-background-color;
+@transparency-fallback-png: @overlay-background-color-fallback;
 
 // Detailed Color setup
 // ====================
 
 // Body
-@font-color: @foreground-color;
-@font-color-inverted: @foreground-color-inverted;
-@title-color: @primary-color;
-@title-color-inverted: @primary-color-inverted;
+@font-color: @text-color;
+@font-color-inverted: @text-background-color-fallback;
+@title-color: @title-text-color;
+@title-color-inverted: @title-background-color;
 
 // Buttons
-@button-color: @secondary-color;
-@button-color-hover: darken(@button-color, 40%);
-@button-color-disabled: @disabled-color;
+@button-color: @interactive-normal-color;
+@button-color-hover: @interactive-hover-color;
+@button-color-disabled: @interactive-disabled-color;
 
-@button-text-color: @secondary-color-inverted;
-@button-text-color-hover: @secondary-color-inverted;
-@button-text-color-disabled: @disabled-color-inverted;
+@button-text-color: @interactive-text-normal-color;
+@button-text-color-hover: @interactive-text-hover-color;
+@button-text-color-disabled: @interactive-text-disabled-color;
 
 @button-border-color: @button-color;
 @button-border-color-hover: @button-color-hover;
 @button-border-color-disabled: @button-color-disabled;
 
 // Navigation 
-@navigation-color: @tertiary-color;
+@navigation-color: @navigation-bg-color;
 
-@navigation-icon-color: @tertiary-color-inverted;
-@navigation-icon-color-hover: darken(@navigation-icon-color, 40%);
+@navigation-icon-color: @interactive-normal-color;
+@navigation-icon-color-hover: @interactive-hover-color;
 
-@navigation-progress-color: @navigation-icon-color;
-@navigation-progress-color-hover: darken(@navigation-progress-color, 40%);
+@navigation-progress-color: @validation-success;
+@navigation-progress-color-hover: @interactive-hover-color;
 
-@navigation-progress-background-color: @navigation-color;
-@navigation-progress-background-color-hover: darken(@navigation-color, 40%);
+@navigation-progress-background-color: @validation-error;
+@navigation-progress-background-color-hover: @button-color-hover;
 
-@navigation-progress-border-color: @navigation-icon-color;
+@navigation-progress-border-color: @navigation-text-color;
 
 // Drawer
-@drawer-color: @quaternary-color;
+@drawer-color: @text-background-color-fallback;
 @drawer-border-color: darken(@drawer-color, 20%);
 
-@drawer-icon-color: @quaternary-color-inverted;
-@drawer-icon-color-hover: darken(@drawer-icon-color, 40%);
+@drawer-icon-color: @button-color;
+@drawer-icon-color-hover: @button-color-hover;
 
-@drawer-item-color: @drawer-color;
-@drawer-item-color-hover: darken(@drawer-item-color, 40%);
-@drawer-item-color-selected: @drawer-item-color-hover;
-@drawer-item-color-disabled: @item-color-disabled;
+@drawer-item-color: @interactive-normal-color;
+@drawer-item-color-hover: @interactive-hover-color;
+@drawer-item-color-selected: @interactive-hover-color;
+@drawer-item-color-disabled: @interactive-disabled-color;
 
-@drawer-item-text-color: @quaternary-color-inverted;
-@drawer-item-text-color-hover: @drawer-item-text-color;
-@drawer-item-text-color-selected: @drawer-item-text-color;
-@drawer-item-text-color-disabled: @item-text-color-disabled;
+@drawer-item-text-color: @interactive-text-normal-color;
+@drawer-item-text-color-hover: @interactive-text-hover-color;
+@drawer-item-text-color-selected: @interactive-text-selected-color;
+@drawer-item-text-color-disabled: @interactive-text-disabled-color;
 
-@drawer-progress-color: @drawer-item-text-color;
-@drawer-progress-color-hover: darken(@drawer-progress-color, 40%);
+@drawer-progress-color: @validation-success;
+@drawer-progress-color-hover: @button-color-hover;
 
-@drawer-progress-border-color: darken(@drawer-item-color, 20%);
+@drawer-progress-border-color: @navigation-progress-border-color;
 
 // Components
 @component-background-color: darken(@background-color, 10%);
 
-@item-color: @primary-color;
-@item-color-hover: darken(@item-color, 20%);
+@item-color: @button-color;
+@item-color-hover: @button-color-hover;
 @item-color-disabled: @disabled-color;
-@item-color-visited: desaturate(@item-color, 90%);
+@item-color-visited: @disabled-color;
 @item-color-selected: @item-color-hover;
 
-@item-text-color: @primary-color-inverted;
-@item-text-color-hover: @item-text-color;
-@item-text-color-disabled: @item-text-color;
-@item-text-color-visited: @item-text-color;
-@item-text-color-selected: @item-text-color;
+@item-text-color: @button-text-color;
+@item-text-color-hover: @button-text-color-hover;
+@item-text-color-disabled: @interactive-text-disabled-color;
+@item-text-color-visited: @interactive-text-visited-color;
+@item-text-color-selected: @interactive-text-selected-color;
 
 @item-body-color: @background-color;
 @item-body-text-color: @foreground-color;
@@ -125,21 +159,21 @@
 @item-border-color-inverted: @item-text-color;
 
 // Menu
-@menu-item-color: @primary-color;
-@menu-item-text-color: @primary-color-inverted;
-@menu-item-progress-color: darken(@menu-item-color, 20%);
-@menu-item-progress-fill-color: @menu-item-text-color;
-@menu-item-progress-border-color: transparent;
+@menu-item-color: @button-color;
+@menu-item-text-color: @button-text-color;
+@menu-item-progress-color: @navigation-progress-background-color;
+@menu-item-progress-fill-color: @navigation-progress-color;
+@menu-item-progress-border-color: @navigation-progress-border-color;
 
 // Notify
-@notify-color: @primary-color;
-@notify-text-color: @primary-color-inverted;
+@notify-color: @text-background-color-fallback;
+@notify-text-color: @text-color;
 
-@notify-icon-color: @notify-text-color;
-@notify-icon-color-hover: darken(@notify-color, 20%);
+@notify-icon-color: @button-color;
+@notify-icon-color-hover: @button-color-hover;
 
-@notify-button-color: @notify-text-color;
-@notify-button-color-hover: darken(@notify-color, 20%);
+@notify-button-color: @button-color;
+@notify-button-color-hover: @button-color-hover;
 
-@notify-button-text-color: @notify-color;
-@notify-button-text-color-hover: @notify-text-color;
+@notify-button-text-color: @button-text-color;
+@notify-button-text-color-hover: @button-text-color-hover;
