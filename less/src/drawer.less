@@ -5,6 +5,11 @@
     background-color: @drawer-color;
     color: @drawer-item-text-color;
 
+    .drawer-item-description-inner {
+        font-weight: @font-weight-regular;
+        font-size: @body-text-font-size;
+    }
+
     .drawer-toolbar {
         position: absolute;
         width:100%;
@@ -38,6 +43,7 @@
     .drawer-item {
         .drawer-item-title {
             .sub-title;
+            margin-bottom: @drawer-item-padding-bottom;
         }
         
         .drawer-item-description {
@@ -46,7 +52,8 @@
         }
         
         .drawer-item-open {
-            border-bottom: 1px solid @drawer-item-color;
+            border-bottom: 1px solid @drawer-color;
+            background-color: @drawer-item-color;
             color: @drawer-item-text-color;
             text-decoration: none;
             width: 100%;
