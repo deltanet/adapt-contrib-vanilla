@@ -3,11 +3,12 @@
 
 .loading {
     position: fixed!important; // Needs to be fixed otherwise loading layout can be incorrect
-    background-color: @transparency;
+    background-color: rgba(255,255,255,0.8);
+    color: #000;
     text-align: center;
     
     .no-opacity & {
-    	background-image: @transparency-fallback-png;
+        background-image: url('assets/transparency-light.png');
     }
 
     .loader-gif {

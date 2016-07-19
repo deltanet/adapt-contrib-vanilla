@@ -70,10 +70,18 @@
 
         &.buttons-action {
             margin-right: 0.5%;
+
+            @media all and (max-width: @device-width-small) {
+                min-height: @button-mobile-height-resize;
+            }
         }
 
         &.buttons-feedback {
             margin-left: 0.5%;
+
+            @media all and (max-width: @device-width-small) {
+                min-height: @button-mobile-height-resize;
+            }
         }
     }
 
