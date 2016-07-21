@@ -1,25 +1,18 @@
 .extension-icon-popup {
-	
+
 	.icon-popup-inner {
+		.icon-popup-open-button-text {
+	        font-size: 14px;
+	    }
 
 		&.icon-popup-article {
 			.dir-rtl & {
 			}
 		}
 		&.icon-popup-block {
-		    @media all and (max-width: (@device-width-large + 20px)) {
-	            padding-top: @block-padding / 2;
-	            margin-left: -30px;
-	            .dir-rtl & {
-	            	margin-right: -30px;
-				}
-	        }
-	        @media all and (max-width: (@device-width-small + 20px)) {
-	            padding-top: @block-padding / 3;
-	            margin-left: -20px;
-	            .dir-rtl & {
-	            	margin-right: -20px;
-				}
+	        margin-left: -@component-padding;
+			.dir-rtl & {
+			    margin-right: -@component-padding;
 	        }
 		}
 		&.icon-popup-component {

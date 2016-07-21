@@ -7,6 +7,7 @@
     .block-inner {
         max-width: @device-width-large;
         margin: auto;
+        /*
         padding: @block-padding-top 0 @block-padding-bottom;
         // reduce padding as screen width decreases
         @media all and (max-width: (@device-width-large + 20px)) {
@@ -15,6 +16,7 @@
         @media all and (max-width: (@device-width-small + 20px)) {
             padding: (@block-padding-top / 3) 10px (@block-padding-bottom);
         }
+        */
     }
 
     .block-title {
@@ -22,11 +24,14 @@
         color: @title-text-color;
         text-align: left;
         background-color: @title-background-color;
-        padding: @component-padding / 2 @component-padding @component-padding / 2 @component-padding;
+        padding: (@component-padding / 2) @component-padding (@component-padding / 2) @component-padding;
 
         .dir-rtl & {
             text-align: right;
         }
+
+        margin-left: @component-padding;
+        margin-right: @component-padding;
     }
 
     .block-body{
@@ -35,6 +40,9 @@
         .no-opacity & {
             background-color: @text-background-color-fallback;
         }
+
+        margin-left: @component-padding;
+        margin-right: @component-padding;
     }
 
     .block-body-inner {
@@ -54,6 +62,8 @@
         .no-opacity & {
             background-color: @text-background-color-fallback;
         }
+        margin-left: @component-padding;
+        margin-right: @component-padding;
     }
 
     .component-container {

@@ -35,6 +35,21 @@ li {
 }
 
 //---------------------------------------------------------------------
+// Background for menu added in contentObjects
+//---------------------------------------------------------------------
+.bg-menu {
+    background-image: url(assets/menu-bg.jpg);
+    background-position: top;
+    background-repeat:repeat;
+    background-color: @menu-background-color;
+
+    @media all and (max-width: @device-width-small) {
+        background: transparent;
+        background-color: @menu-background-color;
+    }
+}
+
+//---------------------------------------------------------------------
 // Remove article min-height
 //---------------------------------------------------------------------
 .remove-minHeight {
@@ -50,9 +65,10 @@ li {
         display: none;
     }
     .buttons-marking-icon {
-        display: none;
+        position: relative;
+        margin-top: -10px;
+        margin-bottom: 10px;
     }
-
     .buttons {
     	text-align: center;
     	button {
@@ -81,7 +97,7 @@ li {
         -moz-border-radius: 0px;
         -webkit-border-radius: 30px 30px 0px 0px;
 
-        // Overide style in buttons.less                   
+        // Overide style in buttons.less
         @media all and (max-width: @device-width-small) {
             min-height: 5px !important;
         }
@@ -208,11 +224,21 @@ li {
 		margin: 0px;
 		padding: 0px;
     }
+    .component-inner {
+		padding: 0px;
+    }
     .component-container,
     .media-transcript-container,
     .trickle-button-component {
     	padding-bottom: 0px;
     }
+    .icon-popup-transcript {
+    	top: 0px !important;
+		left: 0px !important;
+		.dir-rtl & {
+	        right: 0px !important;
+	    }
+	}
 }
 
 //---------------------------------------------------------------------
@@ -242,6 +268,12 @@ li {
 .icon-popup-transcript {
 	position: absolute;
 	max-width: 3000px !important;
+	top: @component-padding !important;
+	left: -@component-padding !important;
+	.dir-rtl & {
+		left: @component-padding !important;
+        right: -@component-padding !important;
+    }
 }
 
 //---------------------------------------------------------------------
@@ -498,7 +530,7 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 	.component-container {
 		padding: 0px;
 		background: transparent;
-		
+
 		@media all and (min-width: @device-width-medium) {
 			background-image: url(../../course/en/images/half-width-graphic.jpg);
 			background-position: top right;
@@ -518,13 +550,10 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 
 
 
-
-
-
-// Additional theme classes or attributes to be applied in JSON for more custom style 
+// Additional theme classes or attributes to be applied in JSON for more custom style
 // ====================================================================
 
-// Divider block - used to separate content or break up pages. 
+// Divider block - used to separate content or break up pages.
 // =============
 
 // Class applies alternative background color and component styling
@@ -597,7 +626,7 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 	}
 }
 
-// THIS CLASS IS FOR THE PURPOSE OF THE ADAPT DEMO 
+// THIS CLASS IS FOR THE PURPOSE OF THE ADAPT DEMO
 // blank component demo - applied at block level to add a background image in place of a blank component
 // ====================
 
