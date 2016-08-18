@@ -35,6 +35,17 @@ li {
 }
 
 //---------------------------------------------------------------------
+// Sets the menu item title to a specific height to allow for titles on 2 lines
+//---------------------------------------------------------------------
+.menu-title-min-height {
+	.menu-item-title {
+        @media all and (min-width: @device-width-large) {
+            min-height: 45px;
+        }
+    }
+}
+
+//---------------------------------------------------------------------
 // Background for menu added in contentObjects
 //---------------------------------------------------------------------
 .bg-menu {
@@ -233,11 +244,21 @@ li {
     	padding-bottom: 0px;
     }
     .icon-popup-transcript {
-    	top: 0px !important;
 		left: 0px !important;
 		.dir-rtl & {
 	        right: 0px !important;
 	    }
+		button {
+			border-radius: @button-radius 0px 0px @button-radius;
+			-moz-border-radius: 0px;
+			-webkit-border-radius: @button-radius 0px 0px @button-radius;
+
+			padding-left: @component-padding;
+			.dir-rtl & {
+				padding-left: 10px;
+				padding-right: @component-padding;
+	        }
+		}
 	}
 }
 
@@ -274,6 +295,17 @@ li {
 		left: @component-padding !important;
         right: -@component-padding !important;
     }
+	button {
+		border-radius: 0px 0px 0px @button-radius;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px 0px 0px @button-radius;
+
+		padding-left: @component-padding;
+		.dir-rtl & {
+			padding-left: 10px;
+			padding-right: @component-padding;
+		}
+	}
 }
 
 //---------------------------------------------------------------------
