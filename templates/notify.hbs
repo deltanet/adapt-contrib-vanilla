@@ -10,12 +10,6 @@
                     </div>
                 {{/if}}
 
-                {{#if header}}
-                    <div class="notify-header">
-                        <img src="{{{header}}}"/>
-                    </div>
-                {{/if}}
-
                 {{#if title}}
                     <div class="notify-popup-title">
                         <div class="notify-popup-title-inner h5" tabindex="0" role="heading" aria-level="1">
@@ -29,21 +23,6 @@
                         <div class="notify-popup-body-inner">{{{a11y_text body}}}</div>
                     </div>
                 {{/if}}
-
-                {{#if_value_equals _type "interaction"}}
-                    <div class="notify-popup-navigation">
-                        {{#each _back}}
-                            <button class="base notify-popup-arrow notify-popup-arrow-l" id="notify-arrow-back" data-event="{{_callbackEvent}}" role="button" aria-label="{{_globals._accessibility._ariaLabels.previous}}">
-                                <div class="icon icon-controls-left"></div>
-                            </button>
-                        {{/each}}
-                        {{#each _next}}
-                            <button class="base notify-popup-arrow notify-popup-arrow-r" id="notify-arrow-next" data-event="{{_callbackEvent}}" role="button" aria-label="{{_globals._accessibility._ariaLabels.next}}">
-                                <div class="icon icon-controls-right"></div>
-                            </button>
-                        {{/each}}
-                    </div>
-                {{/if_value_equals}}
 
                 {{#if_value_equals _type "alert"}}
                     {{#if header}}
