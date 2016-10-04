@@ -2,7 +2,7 @@
     <div class="notify-popup-inner">
         <div class="notify-popup-content">
             <div class="notify-popup-content-inner">
-            
+
                 {{#if _showIcon}}
                     <div class="notify-popup-icon">
                         <div class="icon{{#if_value_equals _type "prompt"}} icon-question{{/if_value_equals}}{{#if_value_equals _type "alert"}} icon-warning{{/if_value_equals}}">
@@ -52,14 +52,14 @@
                         </div>
                     {{/if}}
                     <div class="notify-popup-buttons">
-                        <button class="notify-popup-button notify-popup-alert-button" role="button" aria-label="{{{confirmText}}}">{{{confirmText}}}</button>
+                        <button class="notify-popup-button notify-popup-alert-button" aria-label="{{{confirmText}}}">{{{confirmText}}}</button>
                     </div>
                 {{/if_value_equals}}
 
                 {{#if_value_equals _type "prompt"}}
                     <div class="notify-popup-buttons">
                         {{#each _prompts}}
-                            <button class="notify-popup-button notify-popup-prompt-button" data-event="{{_callbackEvent}}" role="button" aria-label="{{{promptText}}}">{{{promptText}}}</button>
+                            <button class="notify-popup-button notify-popup-prompt-button" data-event="{{_callbackEvent}}" aria-label="{{{promptText}}}">{{{promptText}}}</button>
                         {{/each}}
                     </div>
                 {{/if_value_equals}}
@@ -69,14 +69,7 @@
         {{! toolbar moved for AA purposes - last tabbable element}}
         {{#if_value_equals _type "popup"}}
         <div class="notify-popup-buttons">
-            <button class="notify-popup-button notify-popup-done" role="button" aria-label="{{_globals._accessibility._ariaLabels.closePopup}}">
-                Close
-            </button>
-        </div>
-        {{/if_value_equals}}
-        {{#if_value_equals _type "interaction"}}
-        <div class="notify-popup-buttons">
-            <button class="notify-popup-button notify-popup-done" role="button" aria-label="{{_globals._accessibility._ariaLabels.closePopup}}">
+            <button class="notify-popup-button notify-popup-done" aria-label="{{_globals._accessibility._ariaLabels.closePopup}}">
                 Close
             </button>
         </div>
