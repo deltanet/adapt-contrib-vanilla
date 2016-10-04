@@ -1,0 +1,22 @@
+.audio-drawer {
+    .drawer-item-open {
+        width: @custom-drawer-width !important;
+
+        .no-touch &:hover {
+            background-color: @drawer-item-color !important;
+        }
+    }
+}
+
+.audio-controls {
+    &.article-audio {
+    }
+    &.block-audio {
+        margin-right: @component-padding;
+        .dir-rtl & {
+            margin-left: @component-padding;
+        }
+    }
+    &.component-audio {
+    }
+}

@@ -31,6 +31,9 @@
     -moz-border-radius: 50px;
     border-radius: 50px;
     .transition-all-colors;
+    @media all and (max-width: @device-width-small) {
+        width: 70px;
+    }
 }
 
 .page-level-progress-navigation-bar {
@@ -50,15 +53,13 @@
 
 .drawer {
     .page-level-progress-item-title {
-    	background-color: @drawer-item-color;
-    	color: @drawer-item-text-color;
+        background-color: @drawer-item-color;
+        color: @drawer-item-text-color;
         .transition-all-colors;
 
-    	&.drawer-item-open.disabled {
-    		background-color: @drawer-item-color-disabled;
-    		color: @drawer-item-text-color-disabled;
-    		font-size: @button-text-font-size;
-	        font-weight: @font-weight-light;
+        &.drawer-item-open.disabled {
+            background-color: @drawer-item-color-disabled;
+            color: @drawer-item-text-color-disabled;
 
             .no-touch &:hover {
                 background-color: @drawer-item-color-disabled;
@@ -67,18 +68,32 @@
                     background-color: transparent;
                 }
             }
-    	}
+
+            .icon-cross:before,
+            .icon-tick:before {
+                color: @drawer-item-text-color-disabled;
+                content: "\e631" !important;
+            }
+
+        }
 
         &:hover {
             background-color: @drawer-item-color-hover;
             color: @drawer-item-text-color-hover;
 
-            .page-level-progress-indicator {
-                background-color: @drawer-progress-color-hover;
+            .icon {
+                .transition-all-colors;
+                color: @drawer-item-text-color-hover; 
             }
-            .page-level-progress-indicator-incomplete {
-                background-color: @drawer-item-color;
-            }
+            
+        }
+    }
+
+    .icon {
+        color: @drawer-item-text-color;
+        text-align: right;
+        .dir-rtl & {
+            text-align: left;
         }
     }
 }
@@ -88,21 +103,37 @@
 }
 
 .page-level-progress-indicator {
-    width: 15%;
-    height: 8px;
-    border: 1px solid @drawer-progress-border-color;
-	background-color: transparent;
-    .transition-background-color;
+    width: 20%;
+    height: auto;
+    margin-left: 0px;
+    .dir-rtl & {
+        margin-left:inherit;
+        margin-right: 0px;
+    }
+    border: none;
+    background-color: transparent;
 }
 
 .page-level-progress-indicator-complete {
 
     .page-level-progress-indicator-bar {
-        background-color: @drawer-progress-color;
+        //background-color: @drawer-progress-color;
+        display: none;
         .transition-background-color;
 
         &:hover {
-            background-color: @drawer-progress-color-hover;
+            //background-color: @drawer-progress-color-hover;
         }
+    }
+}
+
+.menu {
+    .page-level-progress-menu-item-indicator {
+        border: none;
+        height: 10px;
+    }
+    .page-level-progress-menu-item-indicator-bar {
+        background-color: @menu-item-progress-fill-color;
+        height: 10px;
     }
 }
