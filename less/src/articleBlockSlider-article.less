@@ -4,6 +4,12 @@
 		padding-bottom: 0px;
 	}
 
+	.item-button-arrow {
+		&[disabled="disabled"] {
+			display: none;
+		}
+	}
+
 	///// Bottom navigation /////
 	&.article-blockslider-bottomnav {
 
@@ -102,7 +108,7 @@
 		}
 
 	}
-	
+
 
 	///// Full width /////
 	&.article-blockslider-fullwidth {
@@ -149,21 +155,21 @@
 			.block {
 				.block-inner {
 					// Added padding for arrow navigation
-					@media all and (min-width: @device-width-medium) { 
-						padding: @block-padding-top 70px @block-padding-bottom; 
+					@media all and (min-width: @device-width-medium) {
+						padding: @block-padding-top 70px @block-padding-bottom;
 					}
 
 					.ie8 & {
 						padding: @block-padding-top 70px @block-padding-bottom;
 					}
 
-					@media all and (max-width: @device-width-medium) { 
+					@media all and (max-width: @device-width-medium) {
 						padding-left: 10px;
 						padding-right: 10px;
 					}
 				}
 				// Removed last block inner padding to even the spacing up on smaller resolutions
-				@media all and (max-width: @device-width-medium) { 
+				@media all and (max-width: @device-width-medium) {
 					&:last-child {
 						.block-inner {
 							padding-bottom: 0px;
