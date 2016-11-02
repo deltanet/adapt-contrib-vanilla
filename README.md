@@ -1,8 +1,7 @@
 # adapt-theme-delta
 
 ----------------------------
-**Version number:**  2.0.5   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>
->>>>>>> refs/remotes/adaptlearning/master
+**Version number:**  2.0.6   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>
 **Framework versions:**  2.0     
 **Author / maintainer:** Adapt Core Team  and DeltaNet
 **Accessibility support:** WAI AA   
