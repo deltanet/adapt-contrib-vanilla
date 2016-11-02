@@ -1,14 +1,10 @@
 .hotgrid-audio-component {
-    .hotgrid-popup-close {
-        border-radius: @button-radius;
-    }
-    .hotgrid-popup-arrow {
+    .notify-popup-arrow {
         border-radius: @button-radius;
     }
 	.hotgrid-item-image {
 		border: 3px solid @item-color;
 		&.hotgrid-item-states-image {
-			.item-states-image.default;
 			.no-touch & {
 				&:hover {
 					border: 3px solid @item-color-hover;
@@ -20,7 +16,6 @@
 	.hotgrid-grid-item {
 		&.visited {
 			.hotgrid-item-states-image {
-				.item-states-image.visited;
 				border: 3px solid @item-color-visited;
 			}
 		}
@@ -30,7 +25,6 @@
 		.hotgrid-item-image {
 			border: none;
 			&.hotgrid-item-states-image {
-				.item-states-image.default;
 				.no-touch & {
 					&:hover {
 						border: none;
@@ -41,7 +35,6 @@
 		.hotgrid-grid-item {
 			&.visited {
 				.hotgrid-item-states-image {
-					.item-states-image.visited;
 					border: none;
 				}
 			}

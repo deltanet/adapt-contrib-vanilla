@@ -7,7 +7,10 @@
     overflow-x: hidden;
     padding-top: (@navigation-padding * 2) + @icon-size;
     max-width: @max-width;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+    @media all and (min-width: (@device-width-popup + 20px)) {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
 
     .ie8 & {
         max-width: @ie8-max-width;

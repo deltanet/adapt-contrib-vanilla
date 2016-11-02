@@ -25,11 +25,6 @@
                 {{/if}}
 
                 {{#if_value_equals _type "alert"}}
-                    {{#if header}}
-                        <div class="notify-header">
-                            <img src="{{{header}}}"/>
-                        </div>
-                    {{/if}}
                     <div class="notify-popup-buttons">
                         <button class="notify-popup-button notify-popup-alert-button" aria-label="{{{confirmText}}}">{{{confirmText}}}</button>
                     </div>

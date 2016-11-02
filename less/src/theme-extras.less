@@ -227,9 +227,16 @@ li {
 // Full width video
 //---------------------------------------------------------------------
 .full-width-media {
-	min-height: 10px;
+	@media all and (max-width: (@device-width-small + 20px)) {
+		min-height: 10px;
+	}
 	.article-inner {
-		padding: 0px;
+		padding: @component-padding *2;
+		padding-top: @component-padding;
+
+		@media all and (min-width: (@device-width-popup + 20px)) {
+	        padding: 0px;
+	    }
     }
 	.block-inner {
 		max-width: @max-width;
