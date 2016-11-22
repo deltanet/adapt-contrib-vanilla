@@ -684,3 +684,27 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 		background-image: none;
 	}
 }
+
+//---------------------------------------------------------------------
+// Class to center the submit button when feedback button isn't used
+//---------------------------------------------------------------------
+.single-submit-button {
+	.buttons {
+		text-align: center;
+		button {
+			float: none;
+			width: auto;
+		}
+		.buttons-marking-icon {
+		    position: relative;
+		    margin-top: -10px;
+		    margin-bottom: 10px;
+		}
+		.buttons-action {
+			width: auto;
+			&.disabled {
+				display: none;
+			}
+		}
+	}
+}
