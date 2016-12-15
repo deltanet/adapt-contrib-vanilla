@@ -21,7 +21,7 @@
                     margin-right: 2.5%;
                 }
             }
-        
+
             @media all and (max-width:@device-width-medium) {
                 width:100%;
                 &.even, &.odd {
@@ -38,15 +38,28 @@
         color: @item-text-color;
         border: none;
         background-color: transparent;
+        font-weight: @font-weight-bold;
+
+        &:hover {
+          .gmcq-answer-icon {
+            &.checkbox {
+              border: 3px solid @item-color-hover !important;
+            }
+          }
+        }
 
         .gmcq-answer-icon {
             color: @item-color;
+
+            &.checkbox {
+              border: 3px solid @item-color;
+            }
         }
 
         &.selected {
             color: @item-color-selected;
             background-color: transparent;
-            
+
             .gmcq-item-icon {
                 color: @item-color-selected;
 
@@ -58,9 +71,15 @@
                     color:@validation-error;
                 }
             }
-            
+
             .gmcq-item-inner {
                 color: @item-color-selected;
+            }
+
+            .gmcq-answer-icon {
+                &.checkbox {
+                    border: 3px solid @item-color-selected;
+                }
             }
         }
 
