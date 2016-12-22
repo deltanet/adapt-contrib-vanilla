@@ -3,7 +3,10 @@
 .narrativeAudio-component {
 
     .narrative-widget {
-        background: @primary-color;
+        background: @text-background-color;
+        .no-opacity & {
+            background: @text-background-color-fallback;
+        }
     }
 
     .narrative-control-right {
@@ -43,8 +46,8 @@
         .item-title;
     }
     .narrative-content {
-        background: @primary-color;
-        color: @primary-color-inverted;
+      background: transparent;
+        color: @text-color;
         width: 50%;
     }
 
@@ -59,9 +62,13 @@
 
     .narrative-indicators,
     .narrative-slider-graphic {
-        background-color: @text-background-color;
-        .no-opacity & {
-            background-color: @text-background-color-fallback;
+        background: transparent;
+    }
+
+    .narrative-progress {
+        background-color: @item-color;
+        &.selected {
+            background-color: @item-color-selected;
         }
     }
 
