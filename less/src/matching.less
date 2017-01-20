@@ -21,11 +21,11 @@
   }
 
   .matching-correct-icon {
-    color: @validation-success;
+    color: @item-text-color;
   }
 
   .matching-incorrect-icon {
-    color: @validation-error;
+    color: @item-text-color;
   }
 
   .matching-select {
@@ -37,7 +37,7 @@
     @media all and (max-width:@device-width-medium) and (min-width:@device-width-small) {
         width:105%;
     }
-      
+
     @media all and (max-width:(@device-width-small - 1)) {
        width:110%;
     }
@@ -68,10 +68,10 @@
     &:hover {
       color: @item-text-color-hover;
       &.matching-correct-icon {
-        color: @validation-success;
+        color: @item-text-color;
       }
       &.matching-incorrect-icon {
-        color: @validation-error;
+        color: @item-text-color;
       }
     }
   }
