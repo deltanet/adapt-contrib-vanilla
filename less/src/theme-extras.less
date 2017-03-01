@@ -24,6 +24,21 @@ li {
 }
 
 //---------------------------------------------------------------------
+// Subtitles on mediaelement
+//---------------------------------------------------------------------
+.mejs-container {
+	@media all and (min-width: @device-width-medium) {
+		.mejs-captions-position {
+			bottom: 35px;
+		}
+		.mejs-captions-layer {
+			line-height: 35px;
+			font-size: 25px;
+		}
+	}
+}
+
+//---------------------------------------------------------------------
 // Add instruction to an item - Used in narrative
 //---------------------------------------------------------------------
 .item-instruction {
