@@ -1,13 +1,12 @@
 {
   "name": "adapt-theme-delta",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "framework": "^2.0.0",
   "homepage": "https://github.com/deltanet/adapt-theme-delta",
-  "issues": "https://github.com/deltanet/adapt-theme-delta/issues",
-  "displayName": "DeltaNet Standard Theme",
-  "theme": "delta",
-  "description": "A standard theme",
-  "main": "js/delta.js",
+  "displayName": "DeltaNet's Standard Theme",
+  "theme": "adapt-theme-delta",
+  "description": "",
+  "main": "js/adapt-theme-delta.js",
   "keywords": [
     "adapt-plugin",
     "adapt-theme"
