@@ -9,6 +9,11 @@
     height: (@navigation-padding * 2) + @icon-size;
     max-width: @max-width;
 
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
     .ie8 & {
         max-width: @ie8-max-width;
     }
