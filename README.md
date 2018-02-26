@@ -1,7 +1,7 @@
 # adapt-theme-delta
 
 ----------------------------
-**Version number:**  2.1.0  
+**Version number:**  2.1.1  
 **Framework versions:**  2.1+     
 **Author / maintainer:** Adapt Core Team / DeltaNet
 **Accessibility support:** WAI AA   
