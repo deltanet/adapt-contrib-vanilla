@@ -257,14 +257,37 @@ li {
 // Resize video - 80%
 //---------------------------------------------------------------------
 .resize-video-80-pc {
-    @media all and (min-width:@device-width-medium) {
+	@media all and (min-width:@device-width-medium) {
 		.component-widget,
 		.media-transcript-container {
 			width: 80% !important;
 			margin: 0 auto;
 		}
-    }
+		.media-instruction-container {
+			left: 11.4% !important;
+				.dir-rtl & {
+				left: 0 !important;
+				right: 11.4% !important;
+			}
+			@media all and (min-width: (@device-width-small)) {
+				left: 0 !important;
+				right: 0 !important;
+				}
+			}
+		.media-options-container {
+			right: 11.4% !important;
+			.dir-rtl & {
+				right: inherit !important;
+				left: 11.4% !important;
+			}
+			@media all and (min-width: (@device-width-small)) {
+				left: 0 !important;
+				right: 0 !important;
+				}
+			}
+		}
 }
+
 
 //---------------------------------------------------------------------
 // Full width video in single article
