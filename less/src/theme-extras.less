@@ -797,6 +797,19 @@ USAGE:   (Left) Interactive component / (Right) Graphic
 }
 
 //---------------------------------------------------------------------
+// Class to add a resource icon within the body text
+//---------------------------------------------------------------------
+.body-resource-icon {
+  .icon;
+  &:before {
+    content: "\e621";
+    color: @button-color;
+  }
+  vertical-align: middle;
+  display: inline-block;
+}
+
+//---------------------------------------------------------------------
 // Take 5 Specific
 //---------------------------------------------------------------------
 .take5-result-layout {
