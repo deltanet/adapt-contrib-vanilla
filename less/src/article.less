@@ -9,18 +9,16 @@
     }
 
     .article-inner {
-      padding: 0;
-        //padding: @component-padding;
-
-        /*
-        @media all and (max-width: (@device-width-small + 20px)) {
-            padding: @component-padding / 2;
+        padding: @article-padding-top 0 @article-padding-bottom;
+        @media all and (max-width: (@device-width-large + 20px)) {
+            padding: (@article-padding-top / 2) 0 (@article-padding-bottom / 2);
         }
-        */
+        @media all and (max-width: (@device-width-small + 20px)) {
+            padding: (@article-padding-top / 3) 0 (@article-padding-bottom / 3);
+        }
     }
 
     .article-header {
-        //max-width: @device-width-large;
         margin: auto;
         padding: 0;
 
@@ -36,17 +34,15 @@
     }
 
     .article-title {
-        //margin-bottom: @article-title-margin-bottom;
+        margin-bottom: @article-title-margin-bottom;
         color: @title-text-color;
         background-color: @title-background-color;
         text-align: center;
-        padding: (@component-padding / 2) @component-padding (@component-padding / 2) @component-padding;
+        padding: (@title-text-margin / 2) @title-text-margin (@title-text-margin / 2) @title-text-margin;
 
         .dir-rtl & {
             text-align: center;
         }
-
-        margin-bottom: @component-padding;
     }
 
     .article-title-inner {
@@ -61,8 +57,8 @@
         .no-opacity & {
             background-color: @text-background-color-fallback;
         }
-        padding: @component-padding @component-padding @component-padding @component-padding;
-        margin-top: @article-padding;
+        padding: @body-text-margin;
+        margin-top: @body-text-margin;
     }
 
     .article-instruction {
@@ -73,10 +69,10 @@
         .no-opacity & {
             background-color: @text-background-color-fallback;
         }
-        padding: 0px @component-padding @component-padding @component-padding;
+        padding: 0px @body-text-margin @body-text-margin @body-text-margin;
         .instruction-text;
         instr {
-            color:@instruction-color;
+            color: @instruction-color;
         }
     }
 }

@@ -16,7 +16,7 @@
         background-color: @title-background-color;
         color: @title-text-color;
         text-align: left;
-        padding: @component-padding / 2 @component-padding @component-padding / 2 @component-padding;
+        padding: (@component-padding / 2) @component-padding (@component-padding / 2) @component-padding;
 
         .dir-rtl & {
             text-align: right;
@@ -29,7 +29,7 @@
 
     .component-body{
         //margin: @component-body-margin-top 0px @component-body-margin-bottom;
-        padding: @component-padding;
+        padding: @body-text-margin;
         background-color: @text-background-color;
         .no-opacity & {
             background-color: @text-background-color-fallback;
@@ -58,7 +58,7 @@
         .no-opacity & {
             background-color: @text-background-color-fallback;
         }
-        padding: 0px @component-padding @component-padding @component-padding;
+        padding: 0px @body-text-margin @body-text-margin @body-text-margin;
         .instruction-text;
     }
 

@@ -7,16 +7,14 @@
     .block-inner {
         max-width: @device-width-large;
         margin: auto;
-        /*
         padding: @block-padding-top 0 @block-padding-bottom;
         // reduce padding as screen width decreases
         @media all and (max-width: (@device-width-large + 20px)) {
             padding: (@block-padding-top / 2) 20px (@block-padding-bottom / 2);
         }
         @media all and (max-width: (@device-width-small + 20px)) {
-            padding: (@block-padding-top / 3) 10px (@block-padding-bottom);
+            padding: (@block-padding-top / 3) 10px (@block-padding-bottom / 3);
         }
-        */
     }
 
     .block-title {
@@ -24,15 +22,15 @@
         color: @title-text-color;
         text-align: left;
         background-color: @title-background-color;
-        padding: (@component-padding / 2) @component-padding (@component-padding / 2) @component-padding;
+        padding: (@title-text-margin / 2) @title-text-margin (@title-text-margin / 2) @title-text-margin;
 
         .dir-rtl & {
             text-align: right;
         }
 
-        margin-left: @component-padding;
-        margin-top: @component-padding;
-        margin-right: @component-padding;
+        margin-left: @title-text-margin;
+        margin-top: @title-text-margin;
+        margin-right: @title-text-margin;
     }
 
     .block-body{
@@ -42,12 +40,12 @@
             background-color: @text-background-color-fallback;
         }
 
-        margin-left: @component-padding;
-        margin-right: @component-padding;
+        margin-left: @body-text-margin;
+        margin-right: @body-text-margin;
     }
 
     .block-body-inner {
-        padding: @component-padding @component-padding @component-padding @component-padding;
+        padding: @body-text-margin;
     }
 
     .block-instruction {
@@ -55,19 +53,15 @@
         .instruction-text;
 
         instr {
-            color:@instruction-color;
+            color: @instruction-color;
         }
 
-        padding: 0px @component-padding @component-padding @component-padding;
+        padding: 0px @body-text-margin @body-text-margin @body-text-margin;
         background-color: @text-background-color;
         .no-opacity & {
             background-color: @text-background-color-fallback;
         }
-        margin-left: @component-padding;
-        margin-right: @component-padding;
-    }
-
-    .component-container {
-        padding-bottom: @block-padding-bottom;
+        margin-left: @body-text-margin;
+        margin-right: @body-text-margin;
     }
 }
